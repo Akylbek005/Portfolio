@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<main class="container">
+	<section class="content fullpage transition">
+		{% for i in main %}
+		<section class="section" id="section1-v2">
+			<div class="darker medium"></div>
+			<div class="border">
+				<div class="frames">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<div class="corners">
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+			<div class="cover-titles-2">
+				<div class="right-block col-md-8 col-sm-8 col-xs-12">
+					<a href="{% url 'blog' %}">
+						<img src="{{ i.image }}" alt="image-category">
+					</a>
+				</div>
+				<div class="left-block col-md-4 col-sm-4 col-xs-12 align-right">
+					<p>{{ request.user.first_name }}</p>
+					<h1 class="title">{{ i.title }}</h1>
+					<p>{{ i.description }}</p>
+				</div>
+			</div>
+			<div class="enter-category col-md-12">
+				<a href="gallery-2col.html" class="btn">
+					<span>Посмотреть</span>
+					<i class="fa fa-arrow-right"></i>
+				</a>
+			</div>
+		</section>
+		{% endfor %}
+	</section>
+</main>
+
+
+{% endblock %}

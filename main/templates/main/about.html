@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="container">
+	<header class="transition header">
+		<div class="parallax">
+			<div class="darker"></div>
+		</div>
+		<div class="main-menu">
+			<div id="logo">
+				<a href="{% url 'index' %}">
+				</a>
+			</div>
+		</div>
+		<div class="item-category">
+			<h1>О нас</h1>
+			<p>Существует множество вариаций отрывков Lorem Ipsum.e</p>
+			<div class="border">
+				<div></div>
+			</div>
+		</div>
+	</header>
+<!--Content-->
+	<div class="content">
+		<div class="row">
+			<div class="col-md6 col-sm-6 col-xs-12">
+				<img src="{% static 'images/about-me.jpg' %}" alt="Image description" />
+			</div>
+			<div class="col-md6 col-sm-6 col-xs-12">
+				<h3> Моя компания </h3>
+				<p>Давно установлено, что читатель будет отвлекаться на читабельное содержание
+					страницу при просмотре ее макета. Смысл использования Lorem Ipsum в том, что он имеет
+					более или менее нормальное распределение букв, в отличие от использования «Содержимое здесь,
+					content here ', делая его похожим на читаемый английский. Многие настольные издательские пакеты и
+					редакторы веб-страниц теперь используют Lorem Ipsum в качестве текста модели по умолчанию, а поиск
+					«lorem ipsum» откроет для себя многие веб-сайты, все еще находящиеся в зачаточном состоянии. Различные версии имеют
+					развивались годами, иногда случайно, иногда специально (добавленный юмор и тому подобное).
+				</p>
+			</div>
+
+		<!-- Social Icons -->
+			<div class="social-icons col-md12 col-sm-12 col-xs-12">
+				<h3>Найдите нас:</h3>
+
+				<a href="https://www.facebook.com/" class="btn facebook" style="color:" title="Facebook" target="_blank">
+					<i class="fa fa-facebook-official fa-2x"></i></a>
+
+				<a href="https://www.youtube.com/" class="btn youtube" style="color:" title="Youtube">
+					<i class="fa fa-youtube fa-2x"></i></a>
+
+				<a href="#" class="btn px" style="color:" title="500px">
+					<i class="fa fa-500px fa-2x"></i></a>
+
+				<a href="#" class="btn flickr" style="color:" title="Flickr">
+					<i class="fa fa-flickr fa-2x"></i></a>
+
+				<a href="#" class="btn pinterest" style="color:" title="Pinterest">
+					<i class="fa fa-pinterest fa-2x"></i></a>
+
+				<a href="https://www.twitter.com" class="btn twitter" style="color:" title="Twitter">
+					<i class="fa fa-twitter fa-2x"></i></a>
+
+				<a href="#" class="btn instagram" style="color:" title="Instagram">
+					<i class="fa fa-instagram fa-2x"></i></a>
+
+				<a href="#" class="btn google" style="color:" title="Google Plus">
+					<i class="fa fa-google-plus-square fa-2x"></i></a>
+
+			</div>
+		<!-- /Social Icons -->
+
+		<!-- Clients -->
+			<div class="clients col-md-12 col-sm-12 col-xs-12">
+				<h3>Клиенты:</h3>
+				<a href="#">
+					<img src="{% static 'images/company-logo.png' %}" alt="clients">
+				</a>
+				<a href="#">
+					<img src="{% static 'images/company-logo.png' %}" alt="clients">
+				</a>
+				<a href="#">
+					<img src="{% static 'images/company-logo.png' %}" alt="clients">
+				</a>
+				<a href="#">
+					<img src="{% static 'images/company-logo.png' %}" alt="clients">
+				</a>
+				<a href="#">
+					<img src="{% static 'images/company-logo.png' %}" alt="clients">
+				</a>
+				<a href="#">
+					<img src="{% static 'images/company-logo.png' %}" alt="clients">
+				</a>
+			</div>
+		</div>
+
+		<footer id="footer">
+			<p>© Alex Zane 2020. All rights reserved.</p>
+		</footer>
+	</div>
+</main>
+{% endblock %}

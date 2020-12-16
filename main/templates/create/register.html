@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Новый аккаунт {% endblock %}
+
+{% block content %}
+<main class="container">
+	<header class="transition header">
+		<div class="parallax">
+			<div class="darker"></div>
+		</div>
+		<div class="main-menu">
+			<div id="logo">
+				<a href="{% url 'index' %}">
+				</a>
+			</div>
+		</div>
+		<div class="item-category">
+			<h1>Регистрация</h1>
+			<p>Вы можете зарегестрировать новый аккаунт или войти в существующий</p>
+			<div class="border">
+				<div></div>
+			</div>
+		</div>
+	</header>
+
+	<div class="content">
+		<div class="row">
+            <h1>Создать новый аккаунт</h1>
+            <p>Пожалуйста заполните форму ниже:</p>
+            <form action="." method="post">
+                {{ user_form.as_p }}
+                {% csrf_token %}
+                <p><input type="submit" value="Создать аккаунт"></p>
+            </form>
+        </div>
+    </div>
+</main>
+
+<footer id="footer">
+    <p>© Alex Zane 2020. All rights reserved.</p>
+</footer>
+
+{% endblock %}

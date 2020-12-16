@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="container">
+	<header class="transition header">
+		<div class="parallax">
+			<div class="darker"></div>
+		</div>
+
+		<div class="item-category">
+			<h1>contact</h1>
+			<p>Есть много вариантов отрывков Lorem Ipsum.</p>
+			<div class="border">
+				<div></div>
+			</div>
+		</div>
+	</header>
+
+	<div class="content">
+		<div class="row">
+			<div class="contact-info col-sm-12">
+				<div class="col-sm-4">
+					<h3>Мой адресс</h3>
+					<address>
+						<p>г. Бишкек, ул.Ахунбаева 91</p>
+					</address>
+				</div>
+				<div class="col-sm-4">
+					<div class="phone">
+						<h3>Мой номер</h3>
+						<p>+(996) 773 76 07 06</p>
+					</div>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="email">
+						<h3>Напишите мне на email</h3>
+						<p>iakylbek005@mail.com</p>
+					</div>
+				</div>
+			</div>
+
+
+				<div class="contact_form col-sm-12">
+					<div class="col-sm-12">
+						<h3>Поделится сообщением</h3>
+						<p>Теперь это не будет преследоваться правоохранительными органами раньше. Duis ut ullamcorper ipsum. даже авиакомпания.</p>
+					</div>
+					<form id="validForm">
+						<div class="form-group control-group col-sm-6">
+							<span><i class="fa fa-user"></i></span>
+							<input class="form-control" type="text" name="name" minlength="2" placeholder="Имя *">
+						</div>
+						<div class="form-group control-group col-sm-6">
+							<span><i class="fa fa-envelope-o"></i></span>
+							<input class="form-control" type="email" name="mail" placeholder="Email адресс *">
+						</div>
+						<div class="form-group control-group col-sm-12">
+							<span><i class="fa fa-pencil"></i></span>
+							<textarea class="form-control" type="text" name="message" placeholder="Сообщение *"></textarea>
+						</div>
+						<div class="form-button col-xs-12">
+							<button type="submit" name="enter" class="btn center-block">
+								Поделится
+								<i class="fa fa-paper-plane"></i>
+							</button>
+						</div>
+					</form>
+				</div>
+		</div>
+		<footer id="footer">
+			<p>© Your name 2016. All rights reserved.</p>
+		</footer>
+	</div>
+</main>
+{% endblock %}

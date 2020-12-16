@@ -1,0 +1,85 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<link rel="icon" type="image/png" href="{% static 'images/favicon.ico' %} ">
+		<title>Photography Portfolio</title>
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,400italic,600,700,900,200' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+		<link rel="stylesheet" href="{% static 'css/jquery.fullPage.css' %}">
+		<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/photoswipe.css' %}">
+		<link rel="stylesheet" href="{% static 'css/default-skin/default-skin.css' %}">
+		<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+	</head>
+	 <body>
+
+		<main class="container">
+			<header class="transition header fixed">
+				<div class="main-menu">
+
+					<div id="logo">
+						<a href="{% url 'index' %}">
+							<img src="{% static 'images/logo.png' %}" alt="alex-zane-logo">
+						</a>
+					</div>
+
+				    <!-- Menu -->
+					{% if request.user.is_authenticated %}
+
+					<nav id="menu" class="col-md-10 col-sm-10">
+						<ul class="hidden-xs">
+							<li>Привет {{ request.user.first_name }}</li>
+							<li><a class="menu-active" href="{% url 'index' %}">Главная</a></li>
+							<li><a href="{% url 'blog'  %}">Блог</a></li>
+							<li><a href="{% url 'about' %}">О нас </a></li>
+							<li><a href="{% url 'contact' %}">Контакты</a></li>
+							<li><a href="{% url 'logout' %}"> Выйти</a></li>
+						</ul>
+						<div class="mobile-menu col-xs-2 pull-right visible-xs">
+							<i class="fa fa-bars fa-2x"></i>
+						</div>
+					</nav>
+
+					{% else %}
+					<nav id="menu" class="col-md-10 col-sm-10">
+						<ul class="hidden-xs">
+							<li><a href="{% url 'login' %}">Войти</a></li>
+							<li><a href="{% url 'register' %}"> Зарегистрироватся </a></li>
+						</ul>
+						<div class="mobile-menu col-xs-2 pull-right visible-xs">
+							<i class="fa fa-bars fa-2x"></i>
+						</div>
+					</nav>
+					{% endif %}
+				    <!-- /Menu -->
+
+				</div>
+			</header>
+
+			{% block content %}
+			{% endblock %}
+
+			<a href="javascript://" class="back-top btn"><i class="fa fa-angle-up fa-2x"></i></a>
+		</main>
+			<script type="text/javascript" src="{% static 'js/jquery-1.11.3.min.js' %}"></script>
+			<script type="text/javascript" src="{% static 'js/jquery.fullPage.min.js' %}"></script>
+			<script type="text/javascript" src="{% static 'js/imagesloaded.min.js' %}"></script>
+			<script type="text/javascript" src="{% static 'js/masonry.min.js' %}"></script>
+			<script type="text/javascript" src="{% static 'js/website-smooth-scroll.js' %}"></script>
+			<script type="text/javascript" src="{% static 'js/photoswipe.min.js' %}"></script>
+			<script type="text/javascript" src="{% static 'js/photoswipe-ui-default.min.js' %}"></script>
+			<script src="{% static 'js/main.js' %}"></script>
+
+	</body>
+</html>

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Log-in{% endblock %}
+
+{% block content %}
+<main class="container">
+	<header class="transition header">
+		<div class="parallax">
+			<div class="darker"></div>
+		</div>
+		<div class="main-menu">
+			<div id="logo">
+				<a href="{% url 'index' %}">
+				</a>
+			</div>
+		</div>
+		<div class="item-category">
+			<h1>Выход</h1>
+			<p>Войдите что бы продолжить</p>
+			<div class="border">
+				<div></div>
+			</div>
+		</div>
+	</header>
+
+	<div class="content">
+		<div class="row">
+			<h1>Успешный выход</h1>
+			<p>Вы успешно вышли.
+				Вы можете снова <a href="{% url 'login' %}">войти</a> или <a href="{% url 'register' %}">создать</a> новый аккаунт
+			</p>
+		</div>
+	</div>
+</main>
+
+<footer id="footer">
+	<p>© Alex Zane 2020. All rights reserved.</p>
+</footer>
+{% endblock %}

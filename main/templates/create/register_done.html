@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+<main class="container">
+	<header class="transition header">
+		<div class="parallax">
+			<div class="darker"></div>
+		</div>
+		<div class="main-menu">
+			<div id="logo">
+				<a href="{% url 'index' %}">
+				</a>
+			</div>
+		</div>
+		<div class="item-category">
+			<h1>Успешно создано</h1>
+			<p>Добро пожаловать в наш сайт </p>
+			<div class="border">
+				<div></div>
+			</div>
+		</div>
+	</header>
+<!--Content-->
+	<div class="content">
+		<div class="row">
+            <h2> Добро пожаловать  {{ new_user.first_name }}!</h2>
+            <p> Вы успешно создали новый аккаунт.
+                Вы можете <a href="{% url 'login' %}"> войти </a> в свой кабинет.
+            </p>
+        </div>
+    </div>
+</main>
+
+<footer id="footer">
+    <p>© Alex Zane 2020. All rights reserved.</p>
+</footer>
+{% endblock %}
